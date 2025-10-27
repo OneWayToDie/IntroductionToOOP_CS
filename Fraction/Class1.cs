@@ -12,38 +12,30 @@ namespace Fraction
 		int integer; 
 		int numerator; 
 		int denominator; 
-		public int Integer
+
+		public int	GetInteger()
 		{
-			get
-			{
-				return integer;
-			}
-			set
-			{
-				integer = value;
-			}
+			return integer;
 		}
-		public int Numerator
+		public void setInteger(int integer)
 		{
-			get
-			{
-				return numerator;
-			}
-			set
-			{
-				numerator = value;
-			}
+			this.integer = integer;
 		}
-		public int Denominator
+		public int GetNumerator()
 		{
-			get
-			{
-				return denominator;
-			}
-			set
-			{ 
-				denominator = value; 
-			}
+			return numerator;
+		}
+		public void setNumerator(int numerator)
+		{
+			this.numerator = numerator;
+		}
+		public int GetDenominator()
+		{
+			return denominator;
+		}
+		public void setDenominator(int denominator)
+		{
+			this.denominator = denominator;
 		}
 		public Fraction()
 		{
@@ -73,14 +65,14 @@ namespace Fraction
 		{
 			this.integer = 0;
 			this.numerator = numerator;
-			this.Denominator = denominator;
+			this.denominator = denominator;
 			Console.WriteLine($"Constructor:\t\t{this.GetHashCode()}");
 		}
 		public Fraction(int integer, int numerator, int denominator)
 		{
 			this.integer = integer;
 			this.numerator = numerator;
-			this.Denominator = denominator;
+			this.denominator = denominator;
 			Console.WriteLine($"Constructor:\t\t{this.GetHashCode()}");
 		}
 		public Fraction(Fraction other)
